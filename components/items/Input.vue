@@ -1,5 +1,49 @@
 <template>
-
+    <div class="relative">
+        <input 
+            :id="labelId"
+            :type="inputType?inputType:'text'"
+            v-model="inputModel"
+            :disabled="disabled?disabled:false"
+            :class="{
+                'input':true,
+                'rounded-xs':true,
+                'text-gray-600':true,
+                'pl-4':true,
+                'pt-4':true,
+                'pb-1':true,
+                'font-sans':true,
+                'focus:outline-none':true,
+                'active:outline-none':true,
+                'tracking-wide':true,
+                'border-b':true,
+                'shadow-lg':true,
+                'w-full':true,
+                'filled':(this.model.length > 0)? true : false,
+                }"
+        >
+        <label
+            :for="labelId"
+            class="
+                absolute
+                label 
+                mb-0 
+                -mt-2
+                pt-4 
+                pl-4 
+                leading-tighter 
+                text-gray-400
+                text-sm
+                mt-2 
+                cursor-text
+                font-sans
+                font-medium
+                "
+        >
+            {{(labelName)?labelName:"Debug"}}
+        </label>
+        
+    </div>
 </template>
 <script>
 export default {

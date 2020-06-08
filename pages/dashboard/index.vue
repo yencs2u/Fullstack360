@@ -1,10 +1,9 @@
 <template>
-    <div>
-    Dashboard page
+    <div class="flex flex-col">
     </div>
 </template>
 <script>
 export default{
-    
+    layout: "dashboard",
 }
 </script>
