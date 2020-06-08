@@ -1,7 +1,18 @@
 <template>
     <div class="flex flex-col">
+      <contentCard class="mt-2 mb-4">
+        <template v-slot:title>
+          SALES STATISTICS
+        </template>
+        <template v-slot:content>
+          <div class="w-full overflow-hidden p-2">
+            <barChart :chart-data="revenueMonthly.barChartData":options="revenueMonthly.barChartOptions" :height="120"></barChart>
+            </div>
+        </template>
+      </contentCard>
     </div>
 </template>
+
 <script>
     import ContentCard from "~/components/items/ContentCard.vue";
     import BarChart from '~/components/charts/BarChart';
@@ -28,15 +39,15 @@ export default{
       return {
         revenueMonthly: {
           barChartData: {
-            labels: ['Jan','Feb','Mar','Apr','May'],
+            labels: ['Jan','Mar','May','Jul','Sep'],
             datasets: [
               {
                 label: 'Income',
                 backgroundColor: [
-                  chartColors.green,
-                  chartColors.green,
-                  chartColors.green,
-                  chartColors.green,
+                  chartColors.red,
+                  chartColors.orange,
+                  chartColors.yellow,
+                  chartColors.blue,
                   chartColors.green],
                 data: [5, 3, 4, 6, 4]
               }

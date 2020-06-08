@@ -50,7 +50,7 @@
 </template>
 
 <script>
-    import Logo from '~/components/items/Logo.vue'
+    import Logo from '~/components/Logo.vue'
     import InputElement from "~/components/items/Input.vue";
     
   export default {
