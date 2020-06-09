@@ -54,6 +54,13 @@
     import InputElement from "~/components/items/Input.vue";
     
   export default {
+  transition: {
+    name:"inventory",
+    mode:"out-in",
+    duration: {enter: 1000, leave: 500},
+    enterActiveClass: "animated fadeIn",
+    leaveActiveClass: "animated fadeOut"
+  },
   components: {
     Logo,
     InputElement

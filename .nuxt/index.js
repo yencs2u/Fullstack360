@@ -50,7 +50,7 @@ async function createApp (ssrContext) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"inventory","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"My best Nuxt.js project"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"style":[],"script":[]},
+    head: {"title":"inventory","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"My best Nuxt.js project"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"href":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002Fanimate.css@3.5.1","rel":"stylesheet","type":"text\u002Fcss"}],"script":[{"src":"https:\u002F\u002Fcode.jquery.com\u002Fjquery-3.4.1.slim.min.js","type":"text\u002Fjavascript"},{"src":"https:\u002F\u002Fkit.fontawesome.com\u002F0e8de9da22.js","crossorigin":"anonymous","type":"text\u002Fjavascript"}],"style":[]},
 
     router,
     nuxt: {
